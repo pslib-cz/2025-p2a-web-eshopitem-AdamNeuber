@@ -31,7 +31,7 @@ p, a {
     padding: 0.3em 0.4em;
     transform: skew(-20deg);
 }
-.badge > span {
+.badge__text {
     display: inline-block;
     transform: skew(20deg);
 }
@@ -58,6 +58,7 @@ main {
 .card__img {
     display: block;
     width: 100%;
+    object-fit: cover;
 }
 
 .card__container {
