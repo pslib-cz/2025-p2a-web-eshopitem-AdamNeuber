@@ -8,7 +8,9 @@ figure {
 p, a {
     font-family: Arial, Helvetica, sans-serif;
 }
-
+p {
+    margin: 0;
+}
 .heading {
     color: black;
     align-self: center;
@@ -19,34 +21,36 @@ p, a {
 .subtext {
     font-size: 0.875em;
 }
-.badge {
+.badge-container {
     position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    display: flex;
+    flex-direction: column;
+}
+.badge {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 0.9em;
     color: white;
     background-color: var(--green);
-    top: 0.5em;
-    left: 0.5em;
-    padding: 0.3em 0.4em;
-    transform: skew(-20deg);
+    padding: 0.3em 0.7em;
 }
-.badge__text {
-    display: inline-block;
-    transform: skew(20deg);
+.badge--skew {
+    clip-path: polygon(12.5% 0%, 100% 0%, 87.5% 100%, 0% 100%);
 }
 main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
     gap: 1.5em;
 }
 
 .card {
     position: relative;
     display: grid;
-    gap: 0;
-    grid-row: span 4;
+    gap: 0.5em;
+    grid-row: span 5;
     grid-template-rows: subgrid;
 }
 
