@@ -1,6 +1,10 @@
 :root{
     --button: #8D1FA1;
     --green: #009901;
+    --background: #fafafa;
+}
+body {
+    background-color: var(--background);
 }
 figure {
     margin: 0;
@@ -23,8 +27,8 @@ p {
 }
 .badge-container {
     position: absolute;
-    top: 0.5em;
-    left: 0.5em;
+    top: 1.4em;
+    left: 1.4em;
     display: flex;
     flex-direction: column;
 }
@@ -43,7 +47,6 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     grid-template-rows: repeat(5, auto);
-    gap: 1.5em;
 }
 
 .card {
@@ -52,8 +55,14 @@ main {
     gap: 0.5em;
     grid-row: span 5;
     grid-template-rows: subgrid;
+    padding: 1em;
+    background-color: var(--background);
 }
-
+.card:hover {
+    box-shadow: 0 0 50px 0.5px lightgray;
+    z-index: 1;
+    background-color: white;
+}
 .card__header {
     display: grid;
     gap: 0.5em;
